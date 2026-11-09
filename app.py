@@ -1,3 +1,10 @@
+import sys
+
+# Keep DeepFace's console output safe on Windows terminals that cannot encode emojis.
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(errors="replace")
+
 from flask import Flask, render_template, request, jsonify
 from deepface import DeepFace
 import cv2
