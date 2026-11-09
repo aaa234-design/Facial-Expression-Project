@@ -1,5 +1,5 @@
 Flask
 deepface
-opencv-python
+opencv-python>=4.8,<5
 numpy
 Pillow
