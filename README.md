@@ -42,6 +42,8 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+The requirements pin OpenCV to version 4 (`opencv-python>=4.8,<5`) because the OpenCV 4 Python package includes the Haar cascade data files used by the OpenCV face detector. Avoid installing OpenCV 5 for this project until the detector setup is updated.
+
 Run the application:
 
 ```bash
@@ -51,6 +53,11 @@ python app.py
 Open http://127.0.0.1:5000 in your browser.
 
 DeepFace may download model weights the first time it runs. Camera access generally works on localhost; deployed sites should use HTTPS.
+
+### Windows troubleshooting
+
+- **Haar cascade file not found:** install dependencies again with `pip install -r requirements.txt`. This project pins OpenCV below version 5 so the expected cascade data is included with the package. If OpenCV 5 was installed previously, reinstall the pinned version: `pip uninstall opencv-python opencv-contrib-python -y` followed by `pip install -r requirements.txt`.
+- **`charmap` / UnicodeEncodeError in the terminal:** `app.py` configures standard output and error streams to replace characters unsupported by the Windows console before importing DeepFace. Run the updated `app.py` from this repository.
 
 ## Privacy and limitations
 
