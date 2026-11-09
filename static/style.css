@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+.panel {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+video {
+    width: 100%;
+    max-height: 400px;
+    background: black;
+    border-radius: 10px;
+}
+
+button {
+    background: #0284c7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 12px 5px 0 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0369a1;
+}
+
+input {
+    display: block;
+    margin: 15px 0;
+    color: white;
+}
+
+#status {
+    margin: 15px 0;
+    color: #facc15;
+}
+
+#resultImage img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.face-result {
+    background: #334155;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 8px;
+}
+
+.face-result h3 {
+    color: #4ade80;
+    margin-bottom: 8px;
+}
+
+.score {
+    color: #38bdf8;
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}
