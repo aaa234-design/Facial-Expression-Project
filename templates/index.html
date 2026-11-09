@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Emotion Recognition</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>AI Emotion Recognition</h1>
+    <p>Facial Expression Detection System</p>
+</header>
+
+<main>
+    <section class="panel">
+        <h2>Live Camera Detection</h2>
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" hidden></canvas>
+        <div class="buttons">
+            <button id="startCamera">Start Camera</button>
+            <button id="stopCamera">Stop Camera</button>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Upload Image</h2>
+        <input type="file" id="imageInput" accept="image/png,image/jpeg">
+        <button id="uploadButton">Analyze Image</button>
+    </section>
+
+    <section class="panel">
+        <h2>Analysis Result</h2>
+        <p id="status">Waiting for input...</p>
+        <div id="resultImage"></div>
+        <div id="results"></div>
+    </section>
+</main>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
